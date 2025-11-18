@@ -1,3 +1,4 @@
+> 𝑱𝒐𝒏𝒊𝒃𝒆𝒌 𝑶𝒍𝒊𝒎𝒐𝒗𝒊𝒄𝒉:
 <!DOCTYPE html>
 <html lang="uz">
 <head>
@@ -58,15 +59,15 @@
 </div>
 
 <script>
-    // Firebase config
+    // Firebase config siz bergan
     const firebaseConfig = {
-        apiKey: "AIzaSyBsg6XieZVburEUPb7jzMsQY4AmFmyj_rA",
-        authDomain: "vilmorshop-21df5.firebaseapp.com",
-        projectId: "vilmorshop-21df5",
-        storageBucket: "vilmorshop-21df5.firebasestorage.app",
-        messagingSenderId: "215560267090",
-        appId: "1:215560267090:web:1b2bcf807962242391468b",
-        measurementId: "G-GTQ6FWPYP7"
+      apiKey: "AIzaSyBsg6XieZVburEUPb7jzMsQY4AmFmyj_rA",
+      authDomain: "vilmorshop-21df5.firebaseapp.com",
+      projectId: "vilmorshop-21df5",
+      storageBucket: "vilmorshop-21df5.firebasestorage.app",
+      messagingSenderId: "215560267090",
+      appId: "1:215560267090:web:1b2bcf807962242391468b",
+      measurementId: "G-GTQ6FWPYP7"
     };
 
     // Initialize Firebase
@@ -109,6 +110,7 @@
     function trackOrder(){
         const input = document.getElementById("trackingNumber").value.trim();
         const statusDiv = document.getElementById("orderStatus");
+
 if(input===""){
             statusDiv.innerHTML="Iltimos, tracking raqamni kiriting.";
             return;
@@ -138,21 +140,14 @@ if(input===""){
         const phone = document.getElementById("newPhone").value.trim();
         const address = document.getElementById("newAddress").value.trim();
         const status = document.getElementById("newStatus").value.trim();
+
         if(!tracking || !customer || !phone || !address || !status){
             alert("Iltimos, barcha maydonlarni to‘ldiring.");
             return;
         }
         const now = new Date();
         const timeString = now.toLocaleString();
-        const firebaseConfig = {
-           apiKey: "AIzaSyBsg6XieZVburEUPb7jzMsQY4AmFmyj_rA",
-           authDomain: "vilmorshop-21df5.firebaseapp.com",
-           projectId: "vilmorshop-21df5",
-           storageBucket: "vilmorshop-21df5.firebasestorage.app",
-           messagingSenderId: "215560267090",
-           appId: "1:215560267090:web:1b2bcf807962242391468b",
-           measurementId: "G-GTQ6FWPYP7"
-         };
+
         db.collection("orders").add({
             tracking,
             customer,
