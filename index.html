@@ -144,7 +144,15 @@ if(input===""){
         }
         const now = new Date();
         const timeString = now.toLocaleString();
-
+        const firebaseConfig = {
+           apiKey: "AIzaSyBsg6XieZVburEUPb7jzMsQY4AmFmyj_rA",
+           authDomain: "vilmorshop-21df5.firebaseapp.com",
+           projectId: "vilmorshop-21df5",
+           storageBucket: "vilmorshop-21df5.firebasestorage.app",
+           messagingSenderId: "215560267090",
+           appId: "1:215560267090:web:1b2bcf807962242391468b",
+           measurementId: "G-GTQ6FWPYP7"
+         };
         db.collection("orders").add({
             tracking,
             customer,
